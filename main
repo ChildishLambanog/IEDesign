@@ -1,1 +1,9 @@
+#include <stdio.h>
+#include "dice.c"
 
+int main()
+{
+    diceRoller();
+
+    return 0;
+}
