@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+<<<<<<< Updated upstream
 
 //Define header guards
 #ifndef DICE_H
@@ -51,4 +52,45 @@ void diceRoller
 
 
 
+=======
+>>>>>>> Stashed changes
 
+//Define header guards
+#ifndef DICE_H
+#define DICE_H
+
+void diceRoller
+{
+    char choice
+    int checker = 1;
+    int diceRoll;
+
+    while(checker==0)
+    {
+        printf("This is the digital dice please choose (P)Participant or (C)Cursed Entity");
+        scanf(" %c", &choice);
+
+        srand(time(NULL)); //initializes the seed by using current time
+
+        if(choice == 'P' || 'p')
+        {
+            diceRoll = rand() % 4 +1;
+            printf("The D-4 die rolled a %d", diceRoll);
+            checker = 0;
+        } 
+
+        else if(choice == 'C' || 'c')
+        {
+            diceRoll = rand() % 6 +1;
+            printf("The D-6 die rolled a %d", diceRoll);
+            checker = 0;
+        } 
+
+        else()
+        {
+            printf("Incorrect Input!!! Try Again!");
+            checker = 1;
+        }
+    }        
+}
+#endif
